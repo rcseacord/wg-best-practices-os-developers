@@ -667,9 +667,11 @@ There are several reasons why developers may wish to separate the debug informat
 
 The following series of commands needed to the generate the debug info file, strip the debugging information from the main executable, and to add the debug link section.
 
+ ~~~~sh
  objcopy --only-keep-debug executable_file executable_file.debug
  objcopy --strip-unneeded executable_file  
  objcopy --add-gnu-debuglink=executable_file.debug executable_file
+ ~~~~
 
 ### Debug information in the ELF binary format
 
